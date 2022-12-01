@@ -9,6 +9,7 @@ const fileTypes = ['.stl', '.gcode']; //leave the file types here
 client.login(process.env.DISCORD_TOKEN); // initialize bot token
 
 client.on("messageCreate", async (message) => {
+  message.author.send("stinky uh oh")
 
     message.attachments.forEach(attachment => { //iterates over all attachments
         for (fileType of fileTypes) { //iterates over all the file types provided
