@@ -4,7 +4,7 @@ dotenv.config()
 import { Client } from 'discord.js'; // import discord.js
 
 const client = new Client({ intents: ['Guilds', 'GuildMessages', 'GuildMembers', 'DirectMessages'] }); // setup perms
-const fileTypes = ['.stl']; //leave the file types here
+const fileTypes = ['.stl', '.gcode']; //leave the file types here
 
 client.login(process.env.DISCORD_TOKEN); // initialize bot token
 
