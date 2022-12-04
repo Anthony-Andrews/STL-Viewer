@@ -26,7 +26,7 @@ async def on_message(message): # when a message is sent:
 
             await message.attachments[i].save(file) # save the file
 
-            print(attachment) # log url of files
+            print(attachment) # log url of file
 
             render = 'stltopng /res 150 /png "C:\\Users\\antho\\GitHub VSCode Remote Repos\\STL-Viewer\\'+filename+'.png" "C:\\Users\\antho\\GitHub VSCode Remote Repos\\STL-Viewer\\'+file+'"' # parse command to be sent to renderer
 
@@ -36,5 +36,5 @@ async def on_message(message): # when a message is sent:
 
             os.remove(file)                # cleanup of temporary files
             os.remove(filename+'.png') #Easter Egg
-i++
+    i+=1
 client.run(os.getenv('BOT_TOKEN')) # start bot with token
