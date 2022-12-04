@@ -2,7 +2,7 @@
 A Discord bot to create previews for STL 3D-Meshes
 
 # Usage:
-  Upload a .stl file to any channel the bot has access to and get a reply of the preview.
+  Upload a .stl file to any channel the bot has access to (including DMs) and get a reply of the preview.
 ![](https://github.com/Anthony-Andrews/STL-Viewer/blob/main/Demo.gif)
 
 Rendering Engine: https://papas-best.com/stltopng_en
