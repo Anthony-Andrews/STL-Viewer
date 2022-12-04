@@ -1,4 +1,4 @@
-# STL Viewer:
+# STL Viewer (BETA):
 A Discord bot to create previews for STL 3D-Meshes near instantaneously.
 
 # Usage:
@@ -15,12 +15,12 @@ Supports rendering material and color data of STL's
 # Future Feature List:
   Reaction buttons to control persepective for STL preview, image size, & color.
   Support for OBJ, STP and othe 3d-file formats.
-  Support for commands.
+  Support for animated previews (GIFs)
+  Slash command to change preview image size.
+  Generally increasing effeciency and speed.
 
 # Known Issues:
-  When sending multiple STL's, bot does not properly iterate over each STL.
-  When sending STL's though Discord CDN, bot cannot yet view STL.
-  Possible ineffiencies in bot architecture.
+  When sending STL's though Discord CDN links, bot cannot yet view STL.
   Some STL's appear sideways?? idek
 
 # Discord Support & Feedback Server:
