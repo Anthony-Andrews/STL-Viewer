@@ -15,9 +15,9 @@ async def on_ready():
 async def on_message(message): # when a message is sent:
     if message.author == client.user: # if message is sent by a hooman continue:
         return
-i = 0
+    i = 0
     for attachment in message.attachments:          # for each attachment sent by user:
-        attachment = message.attachments[i].url     # parse attachment sent by user to get url, filetype, and filename.
+        attachment = attachment.url     # parse attachment sent by user to get url, filetype, and filename.
         filetype = attachment.split('.')[-1]        # ^
         file = attachment.split('/')[-1]            # ^
         filename = file.split('.')[0]               # ^
@@ -36,5 +36,5 @@ i = 0
 
             os.remove(file)                # cleanup of temporary files
             os.remove(filename+'.png') #Easter Egg
-i++
+      i+=1
 client.run(os.getenv('BOT_TOKEN')) # start bot with token
