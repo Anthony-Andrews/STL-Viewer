@@ -5,13 +5,14 @@ A Discord bot to create previews for STL 3D-Meshes
   Upload a .stl file to any channel the bot has access to (including DMs) and get a reply of the preview.
 ![](https://github.com/Anthony-Andrews/STL-Viewer/blob/main/Demo.gif)
 
-Rendering Engine: https://papas-best.com/stltopng_en
+High-Performance Mesh Rendering Engine Used: https://papas-best.com/stltopng_en
 
 # Known Issues:
   When sending multiple STL's, bot does not properly iterate over each STL.
   When sending STL's though Discord CDN, bot cannot yet view STL.
   Possible ineffiencies in bot architecture.
   Some STL's appear sideways?? idek
+  The color of the preview render changes to orange??
 
 # Future Feature List:
   Reaction buttons to control persepective for STL preview, image size, & color.
