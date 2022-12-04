@@ -1,37 +1,39 @@
-import discord
-import os
-from dotenv import load_dotenv
+import discord # import discord.py bot api
+import os # import os dependencies
+from dotenv import load_dotenv #import dotenv
 
-load_dotenv()
+load_dotenv() # load token from dotenv
 
-client = discord.Client(intents=discord.Intents.all())
+client = discord.Client(intents=discord.Intents.all()) # need to update
 
 @client.event
 async def on_ready():
-    print('We have logged in as {0.user}'.format(client))
+    print('Logged in as {0.user}'.format(client)) # bot initilization gargain
 
 @client.event
-async def on_message(message):
-    if message.author == client.user:
+async def on_message(message): # when a message is sent:
+    if message.author == client.user: # if message is sent by a hooman continue:
         return
 
-    for attachment in message.attachments:
-        attachment = message.attachments[0].url
-        filetype = attachment.split('.')[-1]
-        file = attachment.split('/')[-1]
-        filename = file.split('.')[0]
+    for attachment in message.attachments:          # for each attachment sent by user:
+        attachment = message.attachments[0].url     # parse attachment sent by user to get url, filetype, and filename.
+        filetype = attachment.split('.')[-1]        # ^
+        file = attachment.split('/')[-1]            # ^
+        filename = file.split('.')[0]               # ^
         
-        if filetype.lower() == 'stl':
+        if filetype.lower() == 'stl': # if the attachement is an stl:
 
-            await message.attachments[0].save(file) # saves the file
+            await message.attachments[0].save(file) # save the file
 
-            render = 'stltopng /res 500 /png "C:\\Users\\antho\\GitHub VSCode Remote Repos\\STL-Viewer\\'+filename+'.png" "C:\\Users\\antho\\GitHub VSCode Remote Repos\\STL-Viewer\\'+file+'"'
+            print(attachment) # log url of file
 
-            os.system(render)
+            render = 'stltopng /res 500 /png "C:\\Users\\antho\\GitHub VSCode Remote Repos\\STL-Viewer\\'+filename+'.png" "C:\\Users\\antho\\GitHub VSCode Remote Repos\\STL-Viewer\\'+file+'"' # parse command to be sent to renderer
+
+            os.system(render) # use stltopng (https://papas-best.com/stltopng_en) to render the stl (command generated above)
             
-            await message.reply(file=discord.File(filename+'.png'))
+            await message.reply(file=discord.File(filename+'.png')) # reply to user with preview image
 
-            os.remove(file)
+            os.remove(file)                # cleanup of temporary files
             os.remove(filename+'.png')
 
-client.run(os.getenv('BOT_TOKEN'))
+client.run(os.getenv('BOT_TOKEN')) # start bot with token
