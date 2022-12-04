@@ -4,7 +4,7 @@ A Discord bot to create previews for STL 3D-Meshes
 Usage:
   Upload a .stl file to any channel the bot has access to and get a reply of the preview.
 
-Mesh Renderer: https://papas-best.com/stltopng_en
+Rendering Engine: https://papas-best.com/stltopng_en
 
 Known Issues:
   When sending multiple STL's, bot does not properly iterate over each STL.
