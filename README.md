@@ -19,5 +19,5 @@ Supports rendering material and color data of STL's
   Support for OBJ, STP and othe 3d-file formats.
   Support for commands.
 
-# Join the Discord server for support or feedback:
+# Discord Support & Feedback Server:
   https://discord.gg/tthE7AKAFX
