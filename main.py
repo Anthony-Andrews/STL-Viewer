@@ -1,6 +1,7 @@
 import discord # import discord.py bot api
 import os # import os dependencies
 from dotenv import load_dotenv #import dotenv
+from discord import app_commands # for use with application commands
 
 load_dotenv() # load token from dotenv
 
@@ -27,7 +28,7 @@ async def on_message(message): # when a message is sent:
 
             print(attachment) # log url of file
 
-            render = 'stltopng /res 500 /png "C:\\Users\\antho\\GitHub VSCode Remote Repos\\STL-Viewer\\'+filename+'.png" "C:\\Users\\antho\\GitHub VSCode Remote Repos\\STL-Viewer\\'+file+'"' # parse command to be sent to renderer
+            render = 'stltopng /res 150 /png "C:\\Users\\antho\\GitHub VSCode Remote Repos\\STL-Viewer\\'+filename+'.png" "C:\\Users\\antho\\GitHub VSCode Remote Repos\\STL-Viewer\\'+file+'"' # parse command to be sent to renderer
 
             os.system(render) # use stltopng (https://papas-best.com/stltopng_en) to render the stl (command generated above)
             
