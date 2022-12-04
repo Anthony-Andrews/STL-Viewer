@@ -10,6 +10,7 @@ Known Issues:
   When sending multiple STL's, bot does not properly iterate over each STL.
   When sending STL's though Discord CDN, bot cannot yet view STL.
   Possible ineffiencies in bot architecture.
+  Some STL's appear sideways?? idek
 
 Future Feature List:
   Reaction buttons to control persepective for STL preview, image size, & color.
