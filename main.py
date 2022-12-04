@@ -1,17 +1,10 @@
 import discord
 import os
 from dotenv import load_dotenv
-#import vtkplotlib as vpl
-#from stl.mesh import Mesh
-
-#mesh = Mesh.from_file("Lattice_Cube_by_LazerLord10.stl")
-#fig = vpl.figure()
-#mesh = vpl.mesh_plot(mesh)
-#vpl.show()
 
 load_dotenv()
 
-client = discord.Client(intents=discord.Intents.all() , command_prefix= "~" , description='partialPing test bot :D')
+client = discord.Client(intents=discord.Intents.all())
 
 @client.event
 async def on_ready():
@@ -25,10 +18,20 @@ async def on_message(message):
     for attachment in message.attachments:
         attachment = message.attachments[0].url
         filetype = attachment.split('.')[-1]
-        filename = attachment.split('/')[-1]
-        await message.channel.send(filetype)
+        file = attachment.split('/')[-1]
+        filename = file.split('.')[0]
+        
         if filetype.lower() == 'stl':
-            await message.channel.send('yehaw')
-            await message.attachments[0].save(filename) # saves the file
+
+            await message.attachments[0].save(file) # saves the file
+
+            render = 'stltopng /res 500 /png "C:\\Users\\antho\\GitHub VSCode Remote Repos\\STL-Viewer\\'+filename+'.png" "C:\\Users\\antho\\GitHub VSCode Remote Repos\\STL-Viewer\\'+file+'"'
+
+            os.system(render)
+            
+            await message.reply(file=discord.File(filename+'.png'))
+
+            os.remove(file)
+            os.remove(filename+'.png')
 
 client.run(os.getenv('BOT_TOKEN'))
