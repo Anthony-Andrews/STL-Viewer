@@ -15,16 +15,16 @@ async def on_ready():
 async def on_message(message): # when a message is sent:
     if message.author == client.user: # if message is sent by a hooman continue:
         return
-
+i = 0
     for attachment in message.attachments:          # for each attachment sent by user:
-        attachment = message.attachments[0].url     # parse attachment sent by user to get url, filetype, and filename.
+        attachment = message.attachments[i].url     # parse attachment sent by user to get url, filetype, and filename.
         filetype = attachment.split('.')[-1]        # ^
         file = attachment.split('/')[-1]            # ^
         filename = file.split('.')[0]               # ^
         
         if filetype.lower() == 'stl': # if the attachement is an stl:
 
-            await message.attachments[0].save(file) # save the file
+            await message.attachments[i].save(file) # save the file
 
             print(attachment) # log url of file
 
@@ -35,6 +35,6 @@ async def on_message(message): # when a message is sent:
             await message.reply(file=discord.File(filename+'.png')) # reply to user with preview image
 
             os.remove(file)                # cleanup of temporary files
-            os.remove(filename+'.png')
-
+            os.remove(filename+'.png') #Easter Egg
+i++
 client.run(os.getenv('BOT_TOKEN')) # start bot with token
