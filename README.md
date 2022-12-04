@@ -1,6 +1,9 @@
 STL Viewer:
 A Discord bot to create previews for STL 3D-Meshes
 
+Usage:
+  Upload a .stl file to any channel the bot has access to and get a reply of the preview.
+
 Runs on Papa's Best STL-to-PNG converter https://papas-best.com/stltopng_en
 
 Known Issues:
