@@ -10,6 +10,7 @@ Supports rendering material and color data of STL's
 
 # Collaborators:
   Thanks to OrcaShamu[ironic]#7962 for helping optimize and debug! :D
+  Shout out to sleep deprivation, big helper
 
 # Future Feature List:
   Reaction buttons to control persepective for STL preview, image size, & color.
