@@ -26,7 +26,7 @@ async def on_message(message): # when a message is sent:
 
             await message.attachments[i].save(file) # save the file
 
-            print(attachment) # log url of file
+            print(attachment) # log url of files
 
             render = 'stltopng /res 150 /png "C:\\Users\\antho\\GitHub VSCode Remote Repos\\STL-Viewer\\'+filename+'.png" "C:\\Users\\antho\\GitHub VSCode Remote Repos\\STL-Viewer\\'+file+'"' # parse command to be sent to renderer
 
