@@ -11,7 +11,7 @@ class MyClient(discord.Client):
         self.synced = False
 
     async def on_ready(self):
-        await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='top.gg/bot/1047750288687247420')) # set status of bot to watching top.gg
+       await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="for stl's")) # set status of bot to watching for stl's
         await self.wait_until_ready()
         if not self.synced:
             await tree.sync()
