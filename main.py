@@ -17,12 +17,20 @@ class MyClient(discord.Client):
             self.synced = True
         print(f"We have logged in as {self.user}.")
 
+        ### Commands: ###
+        
 client = MyClient()
 tree = app_commands.CommandTree(client)
 
 @tree.command(name = "hello", description = "Bot says hello!") # add command /hello
 async def self(interaction: discord.Interaction, yourname: str):
     await interaction.response.send_message("Hello "+yourname+("!")) # returns message Hello, yourname!
+    
+@tree.command(name = "adminreveal", description = "admin reveal moment") # moai
+async def self(interaction: discord.Interaction):
+    await interaction.response.send_message(file=discord.File("moai.png"))
+    
+    ### End of Commands ###
 
 @client.event
 async def on_message(message): # when a message is sent:
