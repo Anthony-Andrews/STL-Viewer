@@ -1,4 +1,4 @@
-# STL Viewer (BETA):
+# STL Viewer:
 A Discord bot to create previews for STL 3D-Meshes near instantaneously.
 
 ![Discord Bots](https://top.gg/api/widget/1047750288687247420.svg)
