@@ -17,7 +17,7 @@ Supports rendering material and color data of STL's
 
 # Future Feature List:
   Reaction buttons to control persepective for STL preview, image size, & color.
-  Support for OBJ, STP and othe 3d-file formats.
+  Support for OBJ, STP and more.
   Support for animated previews (GIFs)
   Slash command to change preview image size.
   Generally increasing effeciency and speed.
