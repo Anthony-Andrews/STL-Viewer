@@ -3,6 +3,10 @@ A Discord bot to create previews for STL 3D-Meshes near instantaneously.
 
 [![Discord Bots](https://top.gg/api/widget/1047750288687247420.svg)(https://top.gg/bot/1047750288687247420)
 
+[Click here to invite STL Viewer to your server](https://discord.com/api/oauth2/authorize?client_id=1047750288687247420&permissions=549756062720&scope=applications.commands%20bot)
+
+For help and questions -> [Join the bot support server](https://discord.gg/qSyGw9RtPv)
+
 # Usage:
   Upload a .stl file to any channel the bot has access to (including DMs) and get a reply of the preview.
 ![](https://github.com/Anthony-Andrews/STL-Viewer/blob/main/Demo.gif)
