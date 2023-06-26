@@ -56,8 +56,9 @@ async def on_message(message): # when a message is sent:
                     filename = file.split('.')[0]            # parse the file to get just the file name
 
 
-                    render = 'stltopng /res 250 /png "C:\\Users\\antho\\Desktop\\STL-Viewer-main\\'+filename+'.png" "C:\\Users\\antho\\Desktop\\STL-Viewer-main\\'+file+'"' # parse command to be sent to renderer
+                    render = 'stltopng /res 250 /png "'+os.getcwd()+'\\'+filename+'.png" "'+os.getcwd()+'\\'+file+'"' # parse command to be sent to renderer
 
+                    
                     logging.info(str(message))     # logging for stats
 
                     print("========================================================================================================================")
