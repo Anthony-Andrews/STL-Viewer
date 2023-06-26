@@ -33,5 +33,5 @@ Supports rendering material and color data of STL's
 [Join the bot support server](https://discord.gg/qSyGw9RtPv)
 
 # Self-hosting:
-NOTE: Currently only supports Windows 8 or Newer --
+NOTE: Currently only supports Windows 8 or newer --
 Install guide coming later..
