@@ -59,7 +59,7 @@ async def on_message(message): # when a message is sent:
                     render = 'stltopng /res 250 /png "'+os.getcwd()+'\\'+filename+'.png" "'+os.getcwd()+'\\'+file+'"' # parse command to be sent to renderer
 
                     
-                    logging.info(str(message))     # logging for stats
+                    logging.info(attachStr)     # logging for stats
 
                     print("========================================================================================================================")
                     print('Loading file...   '+str(message))
