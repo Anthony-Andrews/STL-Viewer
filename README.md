@@ -1,4 +1,4 @@
-Deprecated due to discord bot requirements. If you are still interested in this, please reach out or consider self-hosting it.
+Deprecated with the application of Discord application commands. If you are still interested in this, please reach out or consider self-hosting it.
 
 # STL Viewer:
 A Discord bot written in Python and C++ to create previews for STL 3D-Meshes near instantaneously.
